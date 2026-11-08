@@ -9,7 +9,14 @@ jobs:
     steps:
       - name: print a welcome message
         run: echo "welcome to our first workflow"
+      
       - name: checkout kernel version 
         run : uname -r
+      
+      - name: checkout repo  
+        uses: actions/checkout@4.2.2
+      - name: list repo files 
+        run : ls -la 
+        
 
     
