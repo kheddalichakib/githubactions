@@ -9,4 +9,7 @@ jobs:
     steps:
       - name: print a welcome message
         run: echo "welcome to our first workflow"
-       
+      - name: checkout kernel version 
+        run : uname -r
+
+    
