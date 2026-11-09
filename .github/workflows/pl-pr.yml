@@ -1,17 +1,28 @@
 on:
     push:
         branches:
-            -main 
-            -"relase/**"
+            - main 
+            - "relase/**"
+            
         paths:
-           -"src/**"
+           - "src/**"
     pull_request:
         branches:
-             -main
-             -"relase/**"
+             - main
+             - "relase/**"
         paths:
-            -"src/**"
+            - "src/**"
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+          
+          - name: checkoutcode
+          
+            uses: actions/checkout@v4  
         
+          - name: run test
+            run: npm test
 
-
+    
 
