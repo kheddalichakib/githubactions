@@ -2,7 +2,7 @@
 
 Expected="hello test"
 
-OUTPUT=$(node -e "console.log(require('./src/app')('test'))")
+OUTPUT=$(node -e "console.log(require('./src/app.js')('test'))")
 
 # 1. Added spaces inside the brackets
 # 2. Used $OUTPUT and $Expected instead of literal strings
