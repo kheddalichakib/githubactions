@@ -2,6 +2,7 @@
     "name": "simple node app",
     "version": "1.0.0",
     "main": "src/app.js",
+    "type": "module",
     "scripts": {
       "test": "bash src/test.sh"
     }
