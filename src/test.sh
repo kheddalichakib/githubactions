@@ -2,7 +2,7 @@
 
 Expected="hello test"
 
-OUTPUT=$(node -e "import('./src/app.js').then(m => console.log(m.default('test')))")
+OUTPUT=$(node -e "console.log(require('./src/app.js')('test'))")
 
 if [ "$OUTPUT" == "$Expected" ]; then
     echo "test passed"
