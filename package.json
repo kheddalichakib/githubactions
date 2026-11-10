@@ -3,6 +3,6 @@
     "version": "1.0.0",
     "main": "src/app",
     "scripts": {
-      "test": "bash src/app "
+      "test": "bash src/test "
     }
 }
