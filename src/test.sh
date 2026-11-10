@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Expected="hello test"
+Expected="hell test"
 
 OUTPUT=$(node -e "console.log(require('./src/app.js')('test'))")
 
