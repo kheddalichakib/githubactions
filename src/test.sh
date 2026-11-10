@@ -2,20 +2,12 @@
 
 Expected="hello test"
 
-OUTPUT=$(node -e "console.log(require('./src/app.js')('test'))")
+OUTPUT=$(node -e "import('./src/app.js').then(m => console.log(m.default('test')))")
 
-# 1. Added spaces inside the brackets
-# 2. Used $OUTPUT and $Expected instead of literal strings
 if [ "$OUTPUT" == "$Expected" ]; then
-
     echo "test passed"
-
     exit 0
-
 else 
-
     echo "test failed"
-
     exit 1
-
 fi

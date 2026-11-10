@@ -1,28 +1,30 @@
+name: CI
+
 on:
     push:
         branches:
             - main 
-            - "relase/**"
-            
+            - "release/**"
         paths:
            - "src/**"
     pull_request:
         branches:
              - main
-             - "relase/**"
+             - "release/**"
         paths:
             - "src/**"
+
 jobs:
     test:
         runs-on: ubuntu-latest
         steps:
-          
           - name: checkoutcode
-          
             uses: actions/checkout@v4  
-        
+
+          - name: Setup Node.js
+            uses: actions/setup-node@v4
+            with:
+              node-version: '18'
+
           - name: run test
-            run:  npm test
-
-    
-
+            run: npm test
